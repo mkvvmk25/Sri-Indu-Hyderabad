@@ -13,28 +13,39 @@ public class One {
 
   static int sn(int num)
   {
-    if( num == 0)
-    {
+    if (num == 0) {
       return 0;
     }
     int e = sn(num - 1);
     int d = e + num;
-    return d; 
+    return d;
   }
+
+  static int helperForword(int num)
+  {
+    return snForword(num, 0);
+  }
+
   static int snForword(int num, int sm)
   {
-    if( num == 0)
-    {
+    if (num == 0) {
       return sm;
     }
-    int m = num + sm; 
-    int e = snForword(num - 1,  m );
-    return e; 
+    int m = num + sm;
+    int e = snForword(num - 1, m);
+    return e;
+  }
+  
+  static String rev(String s)
+  {
+    return "";
   }
   
   public static void main(String[] args) {
-    int s = snForword(5, 0 );
-    System.out.println(s);
+    // int d = helperForword(5);
+    String s = "abcdef";
+    String c = rev(s);
+    System.out.println(c); // "fedcba"
     
   }
 }
