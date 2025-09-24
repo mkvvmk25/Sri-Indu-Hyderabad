@@ -21,9 +21,19 @@ public class One {
     int d = e + num;
     return d; 
   }
+  static int snForword(int num, int sm)
+  {
+    if( num == 0)
+    {
+      return sm;
+    }
+    int m = num + sm; 
+    int e = snForword(num - 1,  m );
+    return e; 
+  }
   
   public static void main(String[] args) {
-    int s = sn(3);
+    int s = snForword(5, 0 );
     System.out.println(s);
     
   }
