@@ -1,6 +1,4 @@
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
+package recursions;
 public class One {
   // static int cnt = 0;
 
@@ -62,42 +60,22 @@ public class One {
 
   static void permutate(char arr[], int work, int len) {
 
-    if (work == len)
-    {
+    if (work == len) {
       System.out.println(new String(arr));
-      return; 
+      return;
     }
 
-    for (int i = work; i < len; i++) 
-    {
+    for (int i = work; i < len; i++) {
       swap(arr, work, i);
       permutate(arr, work + 1, len);
       swap(arr, work, i);
     }
 
-    return; 
+    return;
   }
 
   public static void main(String[] args) {
-    String s = "abcdef";
-    char arr[] = s.toCharArray();
-    permutate(arr, 0, arr.length);
-    /*
-     * abc
-     * acb
-     * bac
-     * bca
-     * cab
-     * cba
-     * 
-     * 
-     */
-
-    // // int d = helperForword(5);
-    // String s = "abcdef";
-    // String c = revBack(s, 0);
-    // System.out.println(c); // "fedcba"
-
+    System.out.println("asdsad");
   }
 
 }
